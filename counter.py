@@ -24,6 +24,7 @@ def usage():
     return "Press:\n"\
         "\t- 'x' to count monsters.\n" \
         "\t- 'c' to mark map change.\n" \
+        "\t- 's' to restart recording without saving the current one.\n" \
         "\t- Esc to exit and save file.\n" \
         "The recording is saved in the output directory.\n"
 
@@ -37,6 +38,7 @@ def usage_extended():
         "\t- 'x' to count monsters.\n" \
         "\t- 'c' to mark map change.\n" \
         "\tWhen pressing 'c', if the current map is the last one, the recording will end and the file will be saved.\n" \
+        "\t- 's' to restart recording without saving the current one.\n" \
         "\t- Esc to exit and save file.\n" \
         "The recording is saved in the output directory.\n"
 
@@ -84,9 +86,9 @@ def register_file():
         f.write(json.dumps(json_dictionary, indent=4))
 
 def on_release(key):
+    global START_TIME, TIMESTAMPS, MAP_TIMESTAMPS, COUNTER
     delete_char_on_terminal()
     if key == KeyCode.from_char('x'):
-        global COUNTER
         COUNTER = COUNTER + 1
         TIMESTAMPS.append(f"{time.time() - START_TIME:.3f}")
         print_current_status()
@@ -98,6 +100,11 @@ def on_release(key):
         print_current_status()
     elif key == KeyCode.from_char('h'):
         print(usage_extended())
+    elif key == KeyCode.from_char('s'):
+        START_TIME = time.time()
+        TIMESTAMPS = []
+        MAP_TIMESTAMPS = []
+        print("Recording reset.")
     elif key == Key.esc:
         # Stop listener
         register_file()
