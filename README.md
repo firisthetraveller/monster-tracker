@@ -8,6 +8,16 @@ This program is not aimed at the daily Honkai user, just for data nerds.
 ## Requirements
 This program uses [Python](https://www.python.org), a language that allows fast programming, and the `pynput` library to read keyboard presses. Code is available to read and commented so you know what the program reads and does with it.
 
+### macOS X
+From the `pynput` [documentation](https://pythonhosted.org/pynput/keyboard.html#monitoring-the-keyboard):
+> One of the following must be true:
+> - The process must run as root.
+> - Your application must be white listed under Enable access for assistive devices. Note that this might require that you package your application, since otherwise the entire Python installation must be white listed.
+
+### Windows
+Also from the same [documentation](https://pythonhosted.org/pynput/keyboard.html#monitoring-the-keyboard):
+> On Windows, virtual events sent by other processes may not be received. This library takes precautions, however, to dispatch any virtual events generated to all currently running listeners of the current process.
+
 ## Usage
 ### Installing and launch
 Using a terminal:
