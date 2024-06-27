@@ -24,7 +24,7 @@ def usage():
     return "Press:\n"\
         "\t- 'x' to count monsters.\n" \
         "\t- 'c' to mark map change.\n" \
-        "\t- 's' to restart recording without saving the current one.\n" \
+        "\t- 'r' to restart recording without saving the current one.\n" \
         "\t- Esc to exit and save file.\n" \
         "The recording is saved in the output directory.\n"
 
@@ -38,7 +38,7 @@ def usage_extended():
         "\t- 'x' to count monsters.\n" \
         "\t- 'c' to mark map change.\n" \
         "\tWhen pressing 'c', if the current map is the last one, the recording will end and the file will be saved.\n" \
-        "\t- 's' to restart recording without saving the current one.\n" \
+        "\t- 'r' to restart recording without saving the current one.\n" \
         "\t- Esc to exit and save file.\n" \
         "The recording is saved in the output directory.\n"
 
@@ -100,7 +100,7 @@ def on_release(key):
         print_current_status()
     elif key == KeyCode.from_char('h'):
         print(usage_extended())
-    elif key == KeyCode.from_char('s'):
+    elif key == KeyCode.from_char('r'):
         START_TIME = time.time()
         TIMESTAMPS = []
         MAP_TIMESTAMPS = []

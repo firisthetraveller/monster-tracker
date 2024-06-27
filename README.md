@@ -30,6 +30,7 @@ python3 counter.py
 Press:
 - `x` to count monsters.
 - `c` to mark map change.
+- `r` to restart recording.
 - `Escape` to exit and save file.
 
 The recording is saved in the `output` directory.
