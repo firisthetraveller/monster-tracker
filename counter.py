@@ -70,7 +70,7 @@ def register_file():
     run_time = time.time() - START_TIME
 
     # Just some info
-    print(f'Fought {COUNTER} monsters in {run_time:.3f}s.')
+    print(f'Fought {COUNTER} monsters in {datetime.fromtimestamp(run_time).strftime("%M:%S.%f")}s.')
 
     # The formatted data about to be saved
     json_dictionary = {
