@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import make_interp_spline, BSpline
 
+from counter import MAPS
+
 def usage():
     """
     This returns the basic help usage.
@@ -50,9 +52,20 @@ if __name__ == '__main__':
         spline = make_interp_spline(x, y, k=1)
         y_smooth = spline(x_smooth)
 
-        plt.figure()
-        plt.plot(x_smooth, y_smooth)  # Plot some data on the (implicit) Axes.
-        plt.xlabel('Time')
-        plt.ylabel('Score')
-        plt.title("Test")
+        fig, ax = plt.subplots()
+        ax.plot(x_smooth, y_smooth)  # Plot some data on the (implicit) Axes.
+
+        # Map switch markers
+        mx = [float(x) for x in data['map_time']]
+        my = [20 for i in range(24)]
+        ax.stem(mx, my, 'g', basefmt=" ")
+        mi = 0
+        for xi, yi in zip(mx, my):
+            ax.text(xi-25, yi-10, f'{MAPS[mi]}', fontsize=7, ha='center', va='bottom', rotation=90)
+            mi += 1
+        ax.text(mx[-1]+70, my[-1]-10, f'{MAPS[-1]}', fontsize=7, ha='center', va='bottom', rotation=90)
+
+        ax.set_xlabel('Time (seconds)')
+        ax.set_ylabel('Score (monster/min)')
+        ax.set_title("Monster Density in Honkai Star Rail 2.3")
         plt.show()
