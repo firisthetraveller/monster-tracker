@@ -59,8 +59,12 @@ if __name__ == '__main__':
         mx = [float(x) for x in data['map_time']]
         my = [15 for i in range(24)]
         ax.stem(mx, my, 'g', basefmt=" ")
-        mi = 0
+
+        # Map switch labels
+        mi = 0 # Index of the map name
         for xi, yi in zip(mx, my):
+            # Positions are set after multiple testing
+            # xi, yi are the top stem position
             ax.text(xi-15, 0, f'{MAPS[mi]}', fontsize=7, ha='center', va='bottom', rotation=90)
             mi += 1
         ax.text(mx[-1]+300, 0, f'{MAPS[-1]}', fontsize=7, ha='center', va='bottom', rotation=90)
