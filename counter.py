@@ -110,8 +110,9 @@ def on_release(key):
         register_file()
         return False
 
-# Collect events until released
-print("\nRecording started.\n")
-print(usage())
-with Listener(on_release=on_release) as listener:
-    listener.join()
+if __name__ == "__main__":
+    # Collect events until released
+    print("\nRecording started.\n")
+    print(usage())
+    with Listener(on_release=on_release) as listener:
+        listener.join()
