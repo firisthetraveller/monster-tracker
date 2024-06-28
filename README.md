@@ -36,10 +36,12 @@ Press:
 The recording is saved in the `output` directory.
 
 ### What to do with the output?
-- If you happen to use the program and no better routes have been posted on [Prydwen](https://www.prydwen.gg/star-rail/), please do send it to [me](#contacts) so I can analyze it!
+- Analyze it!
+- Here's my result for example:
+![Monster Density Plot](https://raw.githubusercontent.com/firisthetraveller/monster-tracker/main/images/Figure_2.png)
 
 ## What next?
-I plan to make another program that uses the output of the Monster Tracker to find better routes using the Monster Density metric to get the best "bang for your bucks", a short but dense route.
+Routing!
 
 ## Any suggestions?
 I also take suggestions to help the Honkai: Star Rail community!
