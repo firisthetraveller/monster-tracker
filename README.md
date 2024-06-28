@@ -45,7 +45,7 @@ This route included all of the monsters in the 3D maps in Penacony's Dreamscape,
 Routing!
 
 All of the sinks are time-wasting monsters, and on the flip side, all of the peaks are monster-dense zones, which are very good when you don't have much time.
-We see for example that the end of *Dream's Edge*, the start of *Scalegorge Waterscape* and *Penacony Grand Theater* are quite good.
+We see for example that the end of *Dream's Edge*, the end of *Alchemy Commission* combined with the start of *Scalegorge Waterscape*, and *Penacony Grand Theater* are quite good.
 
 ## Any suggestions?
 I also take suggestions to help the Honkai: Star Rail community!
