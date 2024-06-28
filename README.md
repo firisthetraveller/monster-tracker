@@ -39,9 +39,13 @@ The recording is saved in the `output` directory.
 - Analyze it!
 - Here's my result for example:
 ![Monster Density Plot](https://raw.githubusercontent.com/firisthetraveller/monster-tracker/main/images/Figure_2.png)
+This route included all of the monsters in the 3D maps in Penacony's Dreamscape, which are not included in the Google doc.
 
 ## What next?
 Routing!
+
+All of the sinks are time-wasting monsters, and on the flip side, all of the peaks are monster-dense zones, which are very good when you don't have much time.
+We see for example that the end of *Dream's Edge*, the start of *Scalegorge Waterscape* and *Penacony Grand Theater* are quite good.
 
 ## Any suggestions?
 I also take suggestions to help the Honkai: Star Rail community!
