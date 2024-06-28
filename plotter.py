@@ -57,13 +57,13 @@ if __name__ == '__main__':
 
         # Map switch markers
         mx = [float(x) for x in data['map_time']]
-        my = [20 for i in range(24)]
+        my = [15 for i in range(24)]
         ax.stem(mx, my, 'g', basefmt=" ")
         mi = 0
         for xi, yi in zip(mx, my):
-            ax.text(xi-25, yi-10, f'{MAPS[mi]}', fontsize=7, ha='center', va='bottom', rotation=90)
+            ax.text(xi-15, 0, f'{MAPS[mi]}', fontsize=7, ha='center', va='bottom', rotation=90)
             mi += 1
-        ax.text(mx[-1]+70, my[-1]-10, f'{MAPS[-1]}', fontsize=7, ha='center', va='bottom', rotation=90)
+        ax.text(mx[-1]+300, 0, f'{MAPS[-1]}', fontsize=7, ha='center', va='bottom', rotation=90)
 
         ax.set_xlabel('Time (seconds)')
         ax.set_ylabel('Score (monster/min)')
